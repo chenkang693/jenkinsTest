@@ -42,6 +42,9 @@ def request_func(list_data, method):
             result = requests.post(url=url, json=data, headers=head_not_token)
             result_msg = result.json()["msg"]
             expected_msg = expected["msg"]
+            print("预期结果为: " + expected_msg)
+            print("实际结果为: " + result_msg)
+            print("==================")
             if result_msg == expected_msg:
                 res = "pass"
             else:
