@@ -43,6 +43,7 @@ def request_func(list_data, method):
             result_msg = result.json()["msg"]
             expected_msg = expected["msg"]
             print("预期结果为: " + expected_msg)
+			print("---------------------")
             print("实际结果为: " + result_msg)
             print("==================")
             if result_msg == expected_msg:
